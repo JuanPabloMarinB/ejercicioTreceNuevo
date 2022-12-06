@@ -1,5 +1,7 @@
 package Entidades;
 
+import java.util.ArrayList;
+
 public class Curso {
 
     private String nombreCurso;
@@ -7,11 +9,11 @@ public class Curso {
     private int cantidadDiasPorSemana;
     private String turno;
     private double precioPorHora;
-    private String[] alumnos = new String[5];
+    private ArrayList<Alumno> alumnos;
     public Curso() {
     }
 
-    public Curso(String nombreCurso, int cantidadHorasPorDia, int cantidadDiasPorSemana, String turno, double precioPorHora, String[] alumnos) {
+    public Curso(String nombreCurso, int cantidadHorasPorDia, int cantidadDiasPorSemana, String turno, double precioPorHora, ArrayList<Alumno> alumnos) {
         this.nombreCurso = nombreCurso;
         this.cantidadHorasPorDia = cantidadHorasPorDia;
         this.cantidadDiasPorSemana = cantidadDiasPorSemana;
@@ -60,11 +62,11 @@ public class Curso {
         this.precioPorHora = precioPorHora;
     }
 
-    public String[] getAlumnos() {
-        return alumnos;
+    public ArrayList<Alumno> getAlumnos() {
+        return this.alumnos;
     }
 
-    public void setAlumnos(String[] alumnos) {
+    public void setAlumnos(ArrayList<Alumno> alumnos) {
         this.alumnos = alumnos;
     }
 }
